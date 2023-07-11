@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
 </head>
 <body>
     <header>
@@ -19,6 +20,11 @@
         <div class="products-div hidden none">
             <p class="return"> <- Volver a las opciones</p>
             <div class="product-options"></div>
+        </div>
+        <div class="order-div hidden none">
+            <p class="order-return"><- Volver al menú</p>
+            <h2><b>¡Listo!</b><br>Ahora muestrale el siguiente código qr a tu mesero</h2>
+            <img id="order-code" alt="No funciona :(">
         </div>
     </main>
     <footer>

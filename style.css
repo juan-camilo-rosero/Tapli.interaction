@@ -18,7 +18,7 @@ body{
 }
 
 .none{
-    display: none;
+    display: none !important;
 }
 
 /*Header*/
@@ -72,6 +72,23 @@ main{
     color: var(--primary-color);
     font-weight: 300;
     font-size: 1.8rem;
+}
+
+.continue-order{
+    width: 75vw;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    padding: 1.5rem 5vw;
+    margin-top: 4rem;
+}
+
+.active{
+    cursor: pointer;
+    opacity: 1;
 }
 
 /*Products*/
@@ -171,4 +188,36 @@ footer a{
     text-decoration: none;
     font-weight: 600;
     color: var(--primary-color);
+}
+
+/*Code*/
+
+.order-div{
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+}
+
+.order-return{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.order-div h2{
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 4rem 2rem;
+    font-weight: 400;
+}
+
+#order-code{
+    width: 50vw;
+    height: auto;
 }

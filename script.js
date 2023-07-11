@@ -1,4 +1,4 @@
-import { createOptions, returnMenu, showDishes } from "./menu.js"
+import { createOptions, returnMenu, returnOrder, showDishes } from "./menu.js"
 
 const d = document,
 menu = {
@@ -28,4 +28,5 @@ menu = {
 
 createOptions(menu)
 showDishes(menu)
-returnMenu(".return")
+returnMenu(".return", ".continue-order")
+returnOrder(".order-return")

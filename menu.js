@@ -1,9 +1,10 @@
-import { createCounter } from "./interaction.js";
+import { continueOrder, createCounter, getOrder, updateCounter } from "./interaction.js";
 
 const d = document,
 $menuDiv = d.querySelector(".menu"),
 $productsDiv = d.querySelector(".products-div"),
-$productsDivOptions = d.querySelector(".product-options")
+$productsDivOptions = d.querySelector(".product-options"),
+$orderDiv = d.querySelector(".order-div")
 
 export function createOptions(menu) {
     const options = menu.options
@@ -19,6 +20,12 @@ export function createOptions(menu) {
         // Show option in the main
         $menuDiv.appendChild($optionDiv)
     });
+    const $btn = d.createElement("button")
+    $btn.textContent = "Ordenar"
+    $menuDiv.appendChild($btn)
+    $btn.classList.add("continue-order")
+
+    $btn.addEventListener("click", e => continueOrder(e))
 }
 
 export function showDishes(menu) {
@@ -85,6 +92,7 @@ export function showDishes(menu) {
     
                 $productsDivOptions.appendChild($product)
                 createCounter($counterDiv, $title.textContent, menu)
+                updateCounter($counterDiv, $title.textContent, menu)
             });
             $productsDiv.classList.remove("none")
             setTimeout(() => {
@@ -94,14 +102,32 @@ export function showDishes(menu) {
     });
 }
 
-export function returnMenu(btn) {
-    const $btn = d.querySelector(btn)
+export function returnMenu(btn, continueBtn) {
+    const $btn = d.querySelector(btn),
+    $continueBtn = d.querySelector(continueBtn)
 
     $btn.addEventListener("click", e => {
         $productsDiv.classList.add("hidden")
         setTimeout(() => {
                 $productsDiv.classList.add("none")
                 $productsDivOptions.innerHTML = ""
+                $menuDiv.classList.remove("none")
+            }, 400);
+            setTimeout(() => {
+                $menuDiv.classList.remove("hidden")
+            }, 500);
+            (Object.entries(getOrder()).length)
+            ? $continueBtn.classList.add("active")
+            : $continueBtn.classList.remove("active")
+    })
+}
+
+export function returnOrder(btn) {
+    const $btn = d.querySelector(btn)
+    $btn.addEventListener("click", e => {
+        $orderDiv.classList.add("hidden")
+        setTimeout(() => {
+                $orderDiv.classList.add("none")
                 $menuDiv.classList.remove("none")
             }, 400);
             setTimeout(() => {

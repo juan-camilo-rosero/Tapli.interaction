@@ -41,3 +41,47 @@ export function createCounter($div, category, menu) {
     })
 
 }
+
+export function updateCounter($div, category, menu) {
+    const $parent = $div.parentNode,
+    $counter = $div.firstChild.nextSibling,
+    index = menu.options.indexOf(category),
+    option_name = menu.options_names[index]
+
+    let product = $parent.firstChild.textContent,
+    productKey = product.toLowerCase()
+    productKey = productKey.replace(/[^a-z0-9 ]/g, '')
+    productKey = productKey.replace(/\s/g, '_')
+
+    category = category.toLowerCase()
+    category = category.replace(/[^a-z0-9 ]/g, '')
+    category = category.replace(/\s/g, '_')
+
+    if(Object.prototype.hasOwnProperty.call(order, category) && Object.prototype.hasOwnProperty.call(order[category], productKey)) $counter.textContent = order[category][productKey]
+}
+
+export function continueOrder(e) {
+    const $menuSec = d.querySelector(".menu"),
+    $orderSec = d.querySelector(".order-div")
+    if(e.target.classList.contains("active")) {
+        $menuSec.classList.add("hidden")
+        setTimeout(() => {
+                $menuSec.classList.add("none")
+                $orderSec.classList.remove("none")
+            }, 400);
+            setTimeout(() => {
+                $orderSec.classList.remove("hidden")
+            }, 500);
+
+            new QRious({
+            element: document.querySelector("#order-code"),
+            value: JSON.stringify(order),
+            size: 200,
+            backgroundAlpha: 0,
+            foreground: "#320F00",
+            level: "H",
+        })
+    }
+}
+
+export function getOrder() {return order}
