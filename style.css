@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root{
+    --primary-color: #320F00;
+    --secondary-color: #E8D2B2;
+    --third-color: rgba(0,0,0,0.6);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.none{
+    display: none;
+}
+
+/*Header*/
+
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 2.5rem;
+    color: var(--secondary-color);
+}
+
+/*Main*/
+
+main{
+    width: 100vw;
+    background-color: var(--secondary-color);
+    min-height: 80vh;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Options*/
+
+.menu{
+    transition: .3s;
+    padding-bottom: 4rem;
+}
+
+.option{
+    width: 65vw;
+    border: var(--primary-color) .2rem solid;
+    padding: 1.5rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.option h2{
+    color: var(--primary-color);
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+/*Products*/
+
+.return{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.products-div{
+    transition: .5s;
+}
+
+.product-title{
+    font-size: 2.5rem;
+    padding: 3rem 0  3rem 0;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.product{
+    width: 100vw;
+    padding: 3rem 0;
+    border-top: var(--primary-color) solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-name{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.product-description{
+    font-size: 1.3rem;
+    color: var(--third-color);
+    margin-bottom: 1rem;
+}
+
+.product-price{
+    font-size: 1.3rem;
+    color: var(--primary-color)
+}
+
+.product-name, .product-description, .product-price{
+    width: 80vw;
+    text-align: center;
+}
+
+.counter-div{
+    width: 80vw;
+    border: var(--third-color) solid .1rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-radius: 5rem;
+}
+
+.less, .more, .counter{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--third-color);
+}
+
+.less, .more{
+    cursor: pointer;
+}
+
+.less::selection, .more::selection{
+    background-color: transparent;
+}
+
+/*Footer*/
+
+footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: var(--primary-color) solid 2px;
+}
+
+footer p{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-color);
+}
