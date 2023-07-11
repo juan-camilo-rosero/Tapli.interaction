@@ -63,6 +63,8 @@ export function updateCounter($div, category, menu) {
 export function continueOrder(e) {
     const $menuSec = d.querySelector(".menu"),
     $orderSec = d.querySelector(".order-div")
+
+    let orderText = ""
     if(e.target.classList.contains("active")) {
         $menuSec.classList.add("hidden")
         setTimeout(() => {
@@ -73,9 +75,15 @@ export function continueOrder(e) {
                 $orderSec.classList.remove("hidden")
             }, 500);
 
+            Object.keys(order).forEach(key => {
+                Object.keys(order[key]).forEach(product => {
+                    orderText += ` ---- ${product}: ${order[key][product]}`  
+                });
+            });
+
             new QRious({
             element: document.querySelector("#order-code"),
-            value: JSON.stringify(order),
+            value: JSON.stringify(orderText),
             size: 200,
             backgroundAlpha: 0,
             foreground: "#320F00",
