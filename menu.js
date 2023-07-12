@@ -7,7 +7,8 @@ $productsDivOptions = d.querySelector(".product-options"),
 $orderDiv = d.querySelector(".order-div")
 
 export function createOptions(menu) {
-    const options = menu.options
+    const options = menu.options,
+    $btn = d.querySelector(".continue-order")
     options.forEach(option => {
         // Create the option element
         const $optionDiv = d.createElement("div"),
@@ -20,10 +21,10 @@ export function createOptions(menu) {
         // Show option in the main
         $menuDiv.appendChild($optionDiv)
     });
-    const $btn = d.createElement("button")
+    /*const $btn = d.createElement("button")
     $btn.textContent = "Ordenar"
     $menuDiv.appendChild($btn)
-    $btn.classList.add("continue-order")
+    $btn.classList.add("continue-order")*/
 
     $btn.addEventListener("click", e => continueOrder(e))
 }

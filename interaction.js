@@ -90,6 +90,7 @@ export function continueOrder(e) {
             level: "H",
         })
     }
+    else alert("Primero debes seleccionar uno o más productos")
 }
 
 export function getOrder() {return order}
