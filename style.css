@@ -33,7 +33,7 @@ header{
 }
 
 h1{
-    font-family: 2.5rem;
+    font-size: 2rem;
     color: var(--secondary-color);
 }
 
@@ -220,4 +220,115 @@ footer a{
 #order-code{
     width: 50vw;
     height: auto;
+}
+
+@media (min-width: 1000px){
+    
+    h1{
+        font-size: 2rem;
+    }
+    
+    /*Main*/
+    
+    main{
+        border-radius: 3rem 3rem 0 0;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    /*Options*/
+    
+    .option{
+        width: 25vw;
+        border: var(--primary-color) .15rem solid;
+        padding: 1rem 0;
+        transition: .3s;
+        margin-top: 5rem;
+    }
+
+    .option:hover{
+        width: 28vw;
+    }
+    
+    .option h2{
+        font-size: 1.5rem;
+    }
+    
+    .continue-order{
+        width: 25vw;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        transition: .3s;
+    }
+    
+    .active:hover{
+        width: 28vw;
+    }
+    
+    /*Products*/
+    
+    .return{
+        font-size: 1.3rem;
+    }
+    
+    .product-title{
+        font-size: 2rem;
+    }
+    
+    .product{
+        padding: 4rem 0;
+        border: none;
+    }
+    
+    .product-name{
+        font-size: 1.5rem;
+    }
+    
+    .product-description{
+        font-size: 1.2rem;
+    }
+    
+    .product-price{
+        font-size: 1.2rem;
+    }
+    
+    .counter-div{
+        width: 20vw;
+        border: var(--third-color) solid .15rem;
+        padding: .75rem 0;
+    }
+    
+    .less, .more{
+        font-size: 2rem;
+    }
+    
+    .counter::selection{
+        background-color: transparent;
+    }
+    
+    /*Footer*/
+    
+    footer a{
+        transition: .3s;
+    }
+    footer a:hover{
+        color: black;
+    }
+    
+    /*Code*/
+    
+    .order-div h2{
+        font-size: 2.25rem;
+        line-height: 4rem;
+        padding: 2rem;
+    }
+    
+    #order-code{
+        width: 12vw;
+    }
 }

@@ -5,8 +5,8 @@ menu = {
     options: ["Pasabocas", "Almuerzos", "Bebidas", "Postres"],
     options_names: ["pasabocas", "almuerzos", "bebidas", "postres"],
     pasabocas: {
-        options: ["Pastel de pollo", "Pastel de jamón y queso", "Pastel de espinacas", "Empanada"],
-        descriptions: ["relleno de pollo desmenuzado", "con delicioso jamón y queso derretido", "con espinacas frescas", "de carne con arroz"],
+        options: ["Pastel de pollo", "Pastel de jamón y queso", "Pastel de espinacas", "Pastel de salchicha"],
+        descriptions: ["relleno de pollo desmenuzado", "con delicioso jamón y queso derretido", "con espinacas frescas", "con jugosa salchicha"],
         prices: ["$7.000", "$8.000", "$7.000", "$6.000"]
     },
     almuerzos: {
