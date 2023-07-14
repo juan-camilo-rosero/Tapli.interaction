@@ -2,17 +2,17 @@ import { createOptions, returnMenu, returnOrder, showDishes } from "./menu.js"
 
 const d = document,
 menu = {
-    options:["Entradas", "Platos fuertes", "Bebidas", "Postres"],
-    options_names: ["entradas", "platos_fuertes", "bebidas", "postres"],
-    entradas: {
-        options: ["Empanaditas de coctel", "Arepa de Choclo", "Ensalada de frutas", "Chorizo con arepa"],
-        descriptions: ["de pollo o de carne", "con queso derretido", "con helado", "la receta tradicional"],
-        prices: ["$9.000", "$12.000", "$10.000", "$8.000"]
+    options: ["Pasabocas", "Almuerzos", "Bebidas", "Postres"],
+    options_names: ["pasabocas", "almuerzos", "bebidas", "postres"],
+    pasabocas: {
+        options: ["Pastel de pollo", "Pastel de jamón y queso", "Pastel de espinacas", "Empanada"],
+        descriptions: ["relleno de pollo desmenuzado", "con delicioso jamón y queso derretido", "con espinacas frescas", "de carne con arroz"],
+        prices: ["$7.000", "$8.000", "$7.000", "$6.000"]
     },
-    platos_fuertes: {
-        options: ["Punta de anca", "Milanesa", "Lomo salteado", "Pollo a la parrilla"],
-        descriptions: ["jugosa y tierna", "empanizada y dorada", "salteado con vegetales", "sazonado a la perfección"],
-        prices: ["$36.000", "$28.000", "$30.000", "$26.000"]
+    almuerzos: {
+        options: ["Pollo a la plancha", "Pasta con salsa marinara", "Ensalada César", "Sandwich de pollo"],
+        descriptions: ["jugoso pollo a la plancha con vegetales", "pasta al dente con salsa de tomate casera", "fresca y crujiente con aderezo César", "tierno pollo en un pan recién horneado"],
+        prices: ["$14.000", "$12.000", "$10.000", "$9.000"]
     },
     bebidas: {
         options: ["Refresco de limón", "Jugo de naranja", "Agua mineral", "Cerveza artesanal"],
